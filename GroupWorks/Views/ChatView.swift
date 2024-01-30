@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ChatView: View {
     @State private var textFieldText: String = ""
+    
+    let vm: ChatViewModel = ChatViewModel()
+    
     var body: some View {
         VStack(spacing: 0) {
             //メッセージをスクロールするのでscroll view を使う
@@ -35,7 +38,7 @@ extension ChatView {
         
         return ScrollView {
             VStack(spacing: 0) {
-                ForEach(0..<15) { _ in
+                ForEach(vm.messages) { message in
                     MessageRow()
                 }
             }

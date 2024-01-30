@@ -11,7 +11,7 @@ import SwiftUI
 struct GroupWorks: App {
     var body: some Scene {
         WindowGroup {
-            TitleView()
+            ChatView()
         }
     }
 }
