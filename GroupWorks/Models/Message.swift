@@ -7,9 +7,11 @@
 
 import Foundation
 
-struct Message {
+struct Message: Decodable, Identifiable {
+    var id: UUID
     let roomId: Int
     let employeeCode: Int
+    let employeeName: String
     let text: String
-    let date: Date
+    let date: String
 }
