@@ -10,6 +10,7 @@ import Foundation
 struct Message {
     let roomId: Int
     let employeeCode: Int
+    let employeeName: String
     let text: String
     let date: Date
 }
